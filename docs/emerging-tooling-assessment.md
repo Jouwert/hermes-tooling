@@ -28,9 +28,11 @@ This document applies that frame to three tools I have actually run against real
 ## 1. WikiSkill — persistent knowledge for skill evolution
 
 **What it is.** A framework described in arXiv 2608.27454, *WikiSkill: Compiling Agent Experience
-into Persistent Knowledge for Skill Evolution* (Google-affiliated work). Instead of pushing
-everything an agent learns into ever-longer instructions, it co-evolves the agent's skills with
-a persistent, evidence-linked wiki that sits between raw experience and the executable skill.
+into Persistent Knowledge for Skill Evolution*. Instead of pushing everything an agent learns into
+ever-longer instructions, it co-evolves the agent's skills with a persistent, evidence-linked wiki
+that sits between raw experience and the executable skill. (Attribution kept to the paper itself —
+the abstract page lists authors, and I have not verified any institutional affiliation, so I do not
+assert one.)
 
 **The problem class it removes.** Agents forget *why*. Instructions accumulate, context gets
 re-derived from scratch, a lesson learned in one session never reaches the next, and failed
