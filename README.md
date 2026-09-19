@@ -80,7 +80,9 @@ run at all.
 | **Model routing & quota discipline** | Per-role model choice with fallbacks and quota awareness | In daily use; written as method, not as a static price table |
 
 Each component is described in `docs/architecture.md`, with the boundary and the specific
-honesty caveats in the same document.
+honesty caveats in the same document. Every number used anywhere in this repository is traced
+in `docs/evidence-index.md`, which separates results a reader can reproduce from records held
+privately — and labels the one vendor estimate that the measurement contradicted.
 
 ## What is deliberately omitted
 
