@@ -46,6 +46,25 @@ convention of the writing.
    disagrees with the private record, the private record is authoritative and this index is
    wrong.
 
+## External claims and citations
+
+Anything sourced from outside my own measurements is attributed, not adopted as a result.
+
+| External statement | Source | How it is treated here |
+|---|---|---|
+| The knowledge-layer framework's architecture and purpose | arXiv 2608.27454, *WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution* | Named as the framework's own description; my implementation and findings are separate |
+| The decision model's category and training objective (typed probabilistic decisions, calibration-based training) | Vendor material for Jev (TypeSafe AI) | Described as the vendor's framing; no vendor performance figure is repeated as a result |
+| The code-map tool's capabilities and licensing | Vendor material for Graft (Nanonets) | Capabilities observed directly; public benchmark figures **not** repeated as results |
+| Publicly circulated benchmark figures for the code-map tool | Vendor/community posts | Deliberately excluded — my own canary is the only figure reported, because it is the only one measured on this workload |
+
+## Derived and non-measurement values
+
+| Value | Type | Basis |
+|---|---|---|
+| ~5× overstatement in the tool's own saved-token readout | Derived | Ratio of the tool's claim to its measured consumption, same run |
+| "Narrower than the headline suggests" (domain fit) | Qualitative finding | Batch outcomes across domains in the private experiment record |
+| Adoption verdicts (adopt / adopt narrowly / park / publish unproven) | Judgement | Stated as reasoning in `docs/evaluation-method.md`, with conditions attached |
+
 ## Companion rule
 
 The system that produces the ledger figures refuses to estimate a missing value and records it

@@ -3,10 +3,14 @@
 Case studies in extending my own agent platform — what I built, what I measured, and what I
 decided not to keep.
 
-This repository documents practical work on the agent infrastructure I use for real
-organisational AI projects. It is deliberately documentation-first: the point is the
-engineering judgement behind each decision, including the ones that ended in "parked" or
-"proven not worth it".
+This repository is about **judgement under real constraints**, not about features. It documents
+how I choose what to build, what to adopt, how I measure the difference, and when I retire
+something — including the evaluations that ended in "parked" or "unproven", which are published
+as results in their own right.
+
+I run this platform for real organisational AI work: one operator, quota-limited models, and data
+boundaries that are not negotiable. Every decision below was made in that environment, and each
+one carries the condition under which it was the right call.
 
 ## The real problem
 
@@ -66,6 +70,27 @@ its success criteria *before* it runs, and is allowed to return "no durable lear
 what this tool does *not* do, what it must not receive — is what made several of these safe to
 run at all.
 
+## Three tools worth watching
+
+Not everything worth documenting is something I built. Three tools I run against real work
+change what an agent can do, and almost nobody has evaluated them in an operational setting:
+
+- **WikiSkill** — persistent, evidence-linked knowledge sitting between raw experience and
+  instructions. I implemented it and could *not* reproduce its central claim in my setting: the
+  passive layer is genuinely valuable, and the domains where it pays off are narrower than the
+  headline suggests.
+- **Jev** — a typed decision model that returns calibrated probabilities instead of prose. The
+  category insight matters more than the vendor: a large share of steps that look like "AI steps"
+  are decisions, and treating them as text generation is why so much agent tooling is slow,
+  expensive and unreliable at the boundary that counts.
+- **Graft** — a code map for coding agents. Adopted, measured against source-derived ground
+  truth, kept for the one capability search cannot match at any price, and moved off the default
+  path for everything else.
+
+Full assessment — who each is for, what I measured, the adoption preconditions and the honest
+blockers — is in `docs/emerging-tooling-assessment.md`. The reusable method behind those verdicts
+is in `docs/evaluation-method.md`.
+
 ## What is in here
 
 | Component | What it does | Honest status |
@@ -83,6 +108,13 @@ Each component is described in `docs/architecture.md`, with the boundary and the
 honesty caveats in the same document. Every number used anywhere in this repository is traced
 in `docs/evidence-index.md`, which separates results a reader can reproduce from records held
 privately — and labels the one vendor estimate that the measurement contradicted.
+
+Two companion documents carry the parts that go beyond my own setup:
+
+- `docs/emerging-tooling-assessment.md` — what each emerging tool is, who it is for, what it
+  removes, and the conditions under which I would recommend it.
+- `docs/evaluation-method.md` — the reusable seven-step method I apply to any tool before it is
+  allowed near organisational work, including how to tell a vendor claim from a measurement.
 
 ## What is deliberately omitted
 
