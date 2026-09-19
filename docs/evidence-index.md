@@ -22,6 +22,8 @@ convention of the writing.
 | Adopted-tool comparison: tokens | 7,479 vs 11,015 | Reproducible | Same canary, both arms measured on one consistent basis (not via the vendor's own estimate) | 2026-09-19 |
 | Adopted-tool comparison: wall time | 3.26 s vs 0.049 s | Reproducible | Same canary | 2026-09-19 |
 | Vendor's self-reported saving | ~39,624 tokens | Reported as a claim | Quoted **only** to show it disagrees with the measurement; never presented as a result | 2026-09-19 |
+| Derived ratios from the canary | ~3× fewer tool calls, ~1.5× fewer tokens, ~66× slower | Reproducible | Arithmetic on the canary rows above, same run | 2026-09-19 |
+| Promotion-gate thresholds | 80% / 95% | Not a measurement | Pre-declared pass conditions in the private experiment plan; they are criteria the run must meet, not results | 2026-09-19 |
 | Knowledge-layer closure state | 6 corpora / 58 units / 81 refs, 80 matching | Privately verified | Frozen-hash verifier run on the private experiment record; result `PASS_WITH_DECLARED_DRIFT` | 2026-09-19 |
 | Task ledger: completed records | 392 | Privately verified | Direct count against the private ledger database | 2026-09-19 |
 | Task ledger: linked lifecycle events | 375 | Privately verified | Direct count against the private ledger database | 2026-09-19 |
